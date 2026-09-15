@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Gabriel Abellán, desarrollador low-code y técnico ASIR.">
+    <title>Gabriel Abellán | Desarrollo e infraestructura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="/">Gabriel<span class="brand-mark">.dev</span></a>
+            <nav class="primary-nav" aria-label="Navegación principal">
+                <a href="#proyecto">Proyecto</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section class="hero" aria-labelledby="intro-title">
+            <div>
+                <p class="eyebrow">ASIR / Low-code / Infraestructura</p>
+                <h1 id="intro-title">Construyo sistemas que <em>funcionan.</em></h1>
+                <p class="intro">Soy Gabriel Abellán, técnico superior en ASIR y desarrollador con experiencia en Appian. Me muevo entre la automatización de procesos, los servidores y los datos para resolver problemas concretos.</p>
+                <div class="skills" aria-label="Tecnologías y especialidades">
+                    <span class="skill">Appian</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">SQL Server / MySQL</span>
+                    <span class="skill">Bash / PowerShell</span>
+                    <span class="skill">Linux / Windows Server</span>
+                    <span class="skill">Scrum</span>
+                </div>
+            </div>
+            <aside class="hero-aside">
+                <strong>Enfoque actual</strong>
+                Automatización fiable, herramientas internas útiles y una infraestructura que no dé sorpresas cuando más importa.
+            </aside>
+        </section>
+
+        <section id="proyecto" class="section" aria-labelledby="project-heading">
+            <div class="section-heading">
+                <p class="section-label">01 / Trabajo seleccionado</p>
+                <h2 id="project-heading">Proyecto destacado</h2>
+            </div>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <div>
+                        <p class="project-number">Caso de estudio / SecOps</p>
+                        <h3 class="project-title">SQL-Sentinel</h3>
+                        <p class="project-description">Herramienta para auditar y auto-remediar instancias de SQL Server desde una interfaz CLI clara y operativa.</p>
+                    </div>
+                    <a class="project-link" href="https://github.com/gabrielabellan/SQL-Sentinel" target="_blank" rel="noopener noreferrer">
+                        Ver repositorio
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                    </a>
+                </div>
+
+                <figure class="project-image">
+                    <img src="Imagen_Proceso.png" alt="Terminal mostrando una auditoría de SQL-Sentinel" loading="lazy">
+                </figure>
+
+                <div class="project-details">
+                    <div>
+                        <h3>El problema</h3>
+                        <p>Las bases de datos pueden pasar días sin copias de seguridad por fallos silenciosos. Además, las escaladas de privilegios sin monitorizar exponen la infraestructura a pérdidas de datos y vulnerabilidades.</p>
+                    </div>
+                    <div>
+                        <h3>La solución</h3>
+                        <p>Una arquitectura modular en Python que consulta DMVs, genera reportes Markdown y permite ejecutar backups de emergencia sobre las bases de datos vulnerables.</p>
+                    </div>
+                    <div class="detail-wide">
+                        <h3>Reto técnico</h3>
+                        <p>El driver ODBC bloqueaba el hilo al mezclar lecturas con comandos administrativos. Aislé la auto-remediación con <code>autocommit=True</code> y limpié el buffer mediante <code>nextset()</code> para capturar los errores reales del disco.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="section" aria-labelledby="current-heading">
+            <div class="currently">
+                <h2 id="current-heading">Ahora mismo</h2>
+                <div>
+                    <span class="status">En desarrollo / AI JobMatcher</span>
+                    <p>Estoy construyendo un motor de prospección laboral que procesa CVs y los cruza con ofertas externas. El foco está en la agregación concurrente de APIs, la extracción estructurada con Pydantic y Gemini, y la afinidad semántica por seniority.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact" aria-labelledby="contact-heading">
+            <p class="section-label">02 / Hablemos</p>
+            <h2 id="contact-heading">¿Tienes un sistema que necesita un poco de orden?</h2>
+            <p class="contact-copy">Estoy abierto a propuestas, colaboraciones y conversaciones sobre desarrollo, automatización e infraestructura.</p>
+            <div class="contact-links">
+                <a class="text-link" href="mailto:gabriel.abellan.cv@gmail.com">gabriel.abellan.cv@gmail.com</a>
+                <a class="text-link" href="https://github.com/gabrielabellan" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="text-link" href="https://www.linkedin.com/in/gabriel-abell%C3%A1n-rodr%C3%ADguez/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>&copy; <span id="year"></span> Gabriel Abellán Rodríguez</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
